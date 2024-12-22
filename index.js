@@ -15,3 +15,5 @@ app.use("/notes", notes);
 
 //listen function
 app.listen(process.env.PORT || 8080, () => {});
+
+module.exports = app;

@@ -11,7 +11,5 @@ COPY . ./
 # Install packages
 RUN npm ci
 
-YcS2FdrUjxvVnMFr
-
 # Serve the app
 CMD ["npm", "run", "start"]
