@@ -1,6 +1,8 @@
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
 
+const JWT_SECRET = "ASDFGHJ!@SDFG$%1DF34$%^&*GHJKL";
+
 const fetchuser = (req, res, next) => {
   // Get user from jwt token and add id to req object
   // 401 access denied
@@ -10,7 +12,7 @@ const fetchuser = (req, res, next) => {
   }
   try {
     //verify and decode user data
-    const data = jwt.verify(token, process.env.JWT_SECRET);
+    const data = jwt.verify(token, JWT_SECRET);
     req.user = data.user;
     next();
   } catch (error) {
