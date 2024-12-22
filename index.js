@@ -8,6 +8,7 @@ const notes = require("./routes/notes");
 
 connectDB();
 
+// middleware
 app.use(cors({}));
 app.use(express.json());
 app.use("/auth", auth);
